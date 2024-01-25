@@ -7,9 +7,16 @@ public class Parent : MonoBehaviour
     public float rightLimit = 5f;
     public SpriteRenderer mySprite;
 
+    private Color originalColor;
+
     private void Awake()
     {
         IOC.Register(this);
+    }
+
+    private void Start()
+    {
+        originalColor = mySprite.color;
     }
 
     void Update()
@@ -44,5 +51,10 @@ public class Parent : MonoBehaviour
     public void ChangeColor(Color c)
     {
         mySprite.color = c;
+    }
+
+    public void ResetColor()
+    {
+        mySprite.color = originalColor;
     }
 }
