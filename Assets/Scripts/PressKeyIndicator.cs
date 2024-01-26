@@ -11,6 +11,9 @@ public class PressKeyIndicator : MonoBehaviour
 
     public void onShouldTap(bool shouldTap)
     {
-        mySprite.enabled = shouldTap;
+        if (mySprite != null)
+        {
+            mySprite.enabled = shouldTap;
+        }
     }
 }
