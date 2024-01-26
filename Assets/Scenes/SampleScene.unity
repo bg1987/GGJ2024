@@ -559,7 +559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationColor: {r: 0.92549026, g: 0.2627451, b: 0.6862745, a: 1}
-  HPPerHit: 2.5
   plane: {fileID: 1192990680}
 --- !u!1 &1070714381
 GameObject:
@@ -859,7 +858,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationColor: {r: 0, g: 0.015195131, b: 1, a: 1}
-  HPPerHit: 2.5
 --- !u!1 &1149800172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationColor: {r: 1, g: 0, b: 0, a: 1}
-  HPPerHit: 2.5
 --- !u!1 &1669530837
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1399,6 @@ MonoBehaviour:
   happyColor: {r: 1, g: 0.7122642, b: 0.7122642, a: 1}
   sadColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   HP: 100
-  GameDifficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}
 --- !u!212 &1708784976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1485,7 +1481,6 @@ MonoBehaviour:
   prefab: {fileID: 2287601575229431901, guid: 0d8dd18175afa4017893618ac7c90624, type: 3}
   spawnRadius: 9.86
   arcAngle: 360
-  Difficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}
 --- !u!1 &1865872701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1576,7 @@ GameObject:
   - component: {fileID: 2099009755}
   - component: {fileID: 2099009756}
   - component: {fileID: 2099009757}
+  - component: {fileID: 2099009758}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -1700,6 +1696,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2099009758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099009754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9e4e344c0c4d0fba367e41694aebb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lBumper: {fileID: 118121554}
+  rBumper: {fileID: 448129139}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
