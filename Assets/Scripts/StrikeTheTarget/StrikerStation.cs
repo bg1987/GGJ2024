@@ -24,7 +24,7 @@ namespace StrikeTheTarget
         {
             if (isVisited && success)
             {
-                //baby.AddHp(this, HPPerHit);
+                baby.AddHp(this, HPPerHit);
             }
         }
     }
