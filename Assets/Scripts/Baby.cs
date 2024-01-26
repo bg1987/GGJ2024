@@ -9,21 +9,21 @@ public class Baby : MonoBehaviour
 
     public float hpDecay = 6.6f; //about 15 seconds of idling
     public float HP = 100;
-    
+
     //every X seconds the wants will change.
     public float wantChangeFrequency = 5;
-    
-    public AnimationCurve changeFrequency;
-    
+
+    public Difficulty GameDifficulty;
+
     public float wrongWantFactor = 2;
-    
-    
+    private Station currentWant;
+    private int currentWantIndex;
+
+
     private float MaxHp;
     private List<Station> possibleWants = new List<Station>();
-    private int currentWantIndex;
     private float wantsTimer;
-    private Station currentWant;
-    
+
     private void Awake()
     {
         IOC.Register(this);
@@ -50,8 +50,8 @@ public class Baby : MonoBehaviour
         if (wantsTimer < 0)
         {
             PickNewWant();
-            Debug.Log("Baby wants "+ currentWant.gameObject.name);
-            wantsTimer = changeFrequency.Evaluate(Time.time);
+            Debug.Log("Baby wants " + currentWant.gameObject.name);
+            wantsTimer = GameDifficulty.curve.Evaluate(Time.time);
         }
         else
         {
@@ -61,7 +61,7 @@ public class Baby : MonoBehaviour
 
     private void PickNewWant()
     {
-        var oldWant = currentWant; 
+        var oldWant = currentWant;
         currentWantIndex = Random.Range(0, possibleWants.Count);
         currentWant = possibleWants[currentWantIndex];
         possibleWants.RemoveAt(currentWantIndex);
@@ -79,13 +79,13 @@ public class Baby : MonoBehaviour
         {
             toAdd = -wrongWantFactor * toAdd;
         }
-        
+
         if (HP < MaxHp)
         {
             HP += toAdd;
         }
     }
-    
+
     private void QuitGame()
     {
 #if UNITY_EDITOR
