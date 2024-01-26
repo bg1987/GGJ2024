@@ -41,6 +41,10 @@ namespace HomeRun.Parts
 
         private void OnDisable()
         {
+            var localScale = transform.localScale;
+            localScale = new Vector3(0,localScale.y,localScale.z);
+            transform.localScale = localScale;
+            sequence.Restart();
             sequence.Pause();
         }
 
