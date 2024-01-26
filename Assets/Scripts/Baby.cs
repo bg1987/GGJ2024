@@ -43,8 +43,11 @@ public class Baby : MonoBehaviour
         HP -= GameDifficulty.hpDecay * Time.deltaTime;
         mySprite.color = Color.Lerp(sadColor, happyColor, HP / MaxHp);
         ManageWants();
+
+        GameDifficulty.updateGameTime();
         if (HP < 0)
         {
+            GameDifficulty.resetGameTime();
             GameLifecycle.LoseGame();
         }
     }

@@ -25,9 +25,11 @@ public class Difficulty : ScriptableObject
     public float defaultHpPerStationHit = 5f;
     public float strikerHpPerHit = 20f;
 
+    private float gameTime = 0f;
+
     public float PlaneSpeed
     {
-        get { return Mathf.Lerp(planeSpeedValues.x, planeSpeedValues.y, planeSpeed.Evaluate(Time.time / gameLength)); }
+        get { return Mathf.Lerp(planeSpeedValues.x, planeSpeedValues.y, planeSpeed.Evaluate(gameTime / gameLength)); }
     }
 
     public float PlaneSpawnFrequency
@@ -35,7 +37,7 @@ public class Difficulty : ScriptableObject
         get
         {
             return Mathf.Lerp(planeSpawnFrequencyValues.x, planeSpeedValues.y,
-                planeSpawnFrequency.Evaluate(Time.time / gameLength));
+                planeSpawnFrequency.Evaluate(gameTime / gameLength));
         }
     }
 
@@ -44,7 +46,17 @@ public class Difficulty : ScriptableObject
         get
         {
             return Mathf.Lerp(wantsChangeFrequencyValues.x, wantsChangeFrequencyValues.y,
-                wantsChangeFrequency.Evaluate(Time.time / gameLength));
+                wantsChangeFrequency.Evaluate(gameTime / gameLength));
         }
+    }
+
+    public void updateGameTime()
+    {
+        gameTime += Time.deltaTime;
+    }
+
+    public void resetGameTime()
+    {
+        gameTime = 0f;
     }
 }
