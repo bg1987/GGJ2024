@@ -11,7 +11,7 @@ public class BG : MonoBehaviour
     void Update()
     {
         var position = transform.position;
-        var newX =  -1f * movementScale * position.x;
+        var newX =  -1f * movementScale * parent.position.x;
         transform.position = new Vector3(newX, position.y, position.z);
     }
 }
