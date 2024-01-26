@@ -97,3 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567f97be8a4d04887bf25a14b6347d44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetPosition: {fileID: 0}
+  Difficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}

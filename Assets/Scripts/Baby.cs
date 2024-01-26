@@ -7,15 +7,10 @@ public class Baby : MonoBehaviour
     public Color happyColor;
     public Color sadColor;
 
-    public float hpDecay = 6.6f; //about 15 seconds of idling
     public float HP = 100;
-
-    //every X seconds the wants will change.
-    public float wantChangeFrequency = 5;
 
     public Difficulty GameDifficulty;
 
-    public float wrongWantFactor = 2;
     private Station currentWant;
     private int currentWantIndex;
 
@@ -31,12 +26,13 @@ public class Baby : MonoBehaviour
 
     void Start()
     {
-        MaxHp = HP;
+        HP = GameDifficulty.startingHP;
+        MaxHp = GameDifficulty.maxHp;
     }
 
     void Update()
     {
-        HP -= hpDecay * Time.deltaTime;
+        HP -= GameDifficulty.hpDecay * Time.deltaTime;
         mySprite.color = Color.Lerp(sadColor, happyColor, HP / MaxHp);
         ManageWants();
         if (HP < 0)
@@ -51,7 +47,7 @@ public class Baby : MonoBehaviour
         {
             PickNewWant();
             Debug.Log("Baby wants " + currentWant.gameObject.name);
-            wantsTimer = GameDifficulty.curve.Evaluate(Time.time);
+            wantsTimer = GameDifficulty.WantsChangeFrequency;
         }
         else
         {
@@ -77,12 +73,20 @@ public class Baby : MonoBehaviour
     {
         if (currentWant != s)
         {
-            toAdd = -wrongWantFactor * toAdd;
+            toAdd = -GameDifficulty.wrongWantFactor * toAdd;
         }
 
         if (HP < MaxHp)
         {
             HP += toAdd;
+        }
+    }
+
+    public void PlaneHit()
+    {
+        if (HP < GameDifficulty.happyHpMin)
+        {
+            HP -= GameDifficulty.planeDamage;
         }
     }
 
