@@ -36,7 +36,7 @@ public class Difficulty : ScriptableObject
     {
         get
         {
-            return Mathf.Lerp(planeSpawnFrequencyValues.x, planeSpeedValues.y,
+            return Mathf.Lerp(planeSpawnFrequencyValues.x, planeSpawnFrequencyValues.y,
                 planeSpawnFrequency.Evaluate(gameTime / gameLength));
         }
     }

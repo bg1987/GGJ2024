@@ -7,7 +7,7 @@ public class GameLifecycle : ScriptableObject
     public enum GameState
     {
         Playing,
-        Menu
+        Menu,
     }
 
     public string PlayingSceneName;
@@ -19,7 +19,7 @@ public class GameLifecycle : ScriptableObject
     {
         get
         {
-            if (_state != null)
+            if (_state == null)
             {
                 _state = GameState.Menu;
             }

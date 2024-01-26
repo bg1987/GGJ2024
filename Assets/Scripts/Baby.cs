@@ -60,6 +60,7 @@ public class Baby : MonoBehaviour
         possibleWants.RemoveAt(currentWantIndex);
 
         wantsTimer = GameDifficulty.WantsChangeFrequency;
+        GameDifficulty.resetGameTime();
         Debug.Log("Baby wants " + ((null == currentWant) ? "null" : currentWant.gameObject.name));
     }
 
@@ -117,6 +118,7 @@ public class Baby : MonoBehaviour
     {
         if (HP < GameDifficulty.happyHpMin)
         {
+            Debug.Log("plane made ouch");
             HP -= GameDifficulty.planeDamage;
         }
     }
