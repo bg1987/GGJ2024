@@ -12,83 +12,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb14912433544fb5a2691fe9a83478c, type: 3}
   m_Name: Difficulty
   m_EditorClassIdentifier: 
+  gameLength: 60
+  wantsChangeFrequencyValues: {x: 8, y: 1}
   wantsChangeFrequency:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 8
-      inSlope: -0.008745594
-      outSlope: -0.008745594
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.1161997
-    - serializedVersion: 3
-      time: 60
-      value: 0.5
-      inSlope: -0.125
-      outSlope: -0.125
+      value: 0
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  planeSpeedValues: {x: 5, y: 30}
   planeSpeed:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 5
+      value: 0
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  planeSpawnFrequencyValues: {x: 3, y: 0.05}
   planeSpawnFrequency:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 5
-      inSlope: -0.06666667
-      outSlope: -0.06666667
+      value: 0
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
-      time: 60
+      time: 1
       value: 1
-      inSlope: -0.06666667
-      outSlope: -0.06666667
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   wrongWantFactor: 2
-  startingHP: 100
+  startingHP: 75
   maxHp: 150
-  hpDecay: 6.6
-  happyHpMin: 100
-  planeDamage: 30
+  hpDecay: 10
+  happyHpMin: 90
+  planeDamage: 15
   defaultHpPerStationHit: 5
-  strikerHpPerHit: 20
+  strikerHpPerHit: 50

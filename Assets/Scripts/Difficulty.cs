@@ -3,10 +3,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New DifficultyCurve", menuName = "Difficulty")]
 public class Difficulty : ScriptableObject
 {
+    [SerializeField] private float gameLength;
+
+    [SerializeField] private Vector2 wantsChangeFrequencyValues;
     [SerializeField] private AnimationCurve wantsChangeFrequency;
 
+    [SerializeField] private Vector2 planeSpeedValues;
     [SerializeField] private AnimationCurve planeSpeed;
 
+    [SerializeField] private Vector2 planeSpawnFrequencyValues;
     [SerializeField] private AnimationCurve planeSpawnFrequency;
 
     public float wrongWantFactor = 2;
@@ -22,16 +27,24 @@ public class Difficulty : ScriptableObject
 
     public float PlaneSpeed
     {
-        get { return planeSpeed.Evaluate(Time.time); }
+        get { return Mathf.Lerp(planeSpeedValues.x, planeSpeedValues.y, planeSpeed.Evaluate(Time.time / gameLength)); }
     }
 
     public float PlaneSpawnFrequency
     {
-        get { return planeSpawnFrequency.Evaluate(Time.time); }
+        get
+        {
+            return Mathf.Lerp(planeSpawnFrequencyValues.x, planeSpeedValues.y,
+                planeSpawnFrequency.Evaluate(Time.time / gameLength));
+        }
     }
 
     public float WantsChangeFrequency
     {
-        get { return wantsChangeFrequency.Evaluate(Time.time); }
+        get
+        {
+            return Mathf.Lerp(wantsChangeFrequencyValues.x, wantsChangeFrequencyValues.y,
+                wantsChangeFrequency.Evaluate(Time.time / gameLength));
+        }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Baby : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Baby : MonoBehaviour
     public Color sadColor;
 
     public float HP = 100;
+
+    public SpriteRenderer wantBubble;
 
     private StationBase currentWant;
     private int currentWantIndex;
@@ -49,6 +52,7 @@ public class Baby : MonoBehaviour
     {
         currentWantIndex = Random.Range(0, possibleWants.Count);
         currentWant = possibleWants[currentWantIndex];
+        wantBubble.color = currentWant.stationColor;
         possibleWants.RemoveAt(currentWantIndex);
 
         wantsTimer = GameDifficulty.WantsChangeFrequency;
@@ -74,6 +78,7 @@ public class Baby : MonoBehaviour
         var oldWant = currentWant;
         currentWantIndex = Random.Range(0, possibleWants.Count);
         currentWant = possibleWants[currentWantIndex];
+        wantBubble.color = currentWant.stationColor;
         if (currentWant == null)
         {
             Debug.Break();
@@ -91,6 +96,7 @@ public class Baby : MonoBehaviour
 
     public void AddHp(StationBase s, float toAdd)
     {
+        // Debug.Log(String.Format("{0} adding {1} hp, wanting {2}", s.gameObject.name, toAdd, currentWant.gameObject.name));
         if (currentWant != s)
         {
             toAdd = -GameDifficulty.wrongWantFactor * toAdd;
@@ -100,6 +106,7 @@ public class Baby : MonoBehaviour
         {
             HP += toAdd;
         }
+        // Debug.Log("Current HP "+ HP);
     }
 
     public void PlaneHit()
