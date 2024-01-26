@@ -16,6 +16,7 @@ public class Baby : MonoBehaviour
     private int currentWantIndex;
 
     private Difficulty GameDifficulty;
+    private GameLifecycle GameLifecycle;
 
     private float MaxHp;
     private List<StationBase> possibleWants = new List<StationBase>();
@@ -29,10 +30,10 @@ public class Baby : MonoBehaviour
     void Start()
     {
         GameDifficulty = IOC.Get<Difficulty>();
+        GameLifecycle = IOC.Get<GameLifecycle>();
 
         HP = GameDifficulty.startingHP;
         MaxHp = GameDifficulty.maxHp;
-
 
         initWant();
     }
@@ -44,7 +45,7 @@ public class Baby : MonoBehaviour
         ManageWants();
         if (HP < 0)
         {
-            QuitGame();
+            GameLifecycle.LoseGame();
         }
     }
 
@@ -115,14 +116,5 @@ public class Baby : MonoBehaviour
         {
             HP -= GameDifficulty.planeDamage;
         }
-    }
-
-    private void QuitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
     }
 }

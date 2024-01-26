@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bac0c514eabda4c719cd4322a977b749, type: 3}
-  m_Name: IOC
+  m_Script: {fileID: 11500000, guid: 1c642eb80761c4d3a8d7b2cfa1cef2ce, type: 3}
+  m_Name: GameLifecycle
   m_EditorClassIdentifier: 
-  gameDifficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}
-  gameLifeCycle: {fileID: 11400000, guid: 0e405685ee24448869b55fa1e6f82079, type: 2}
+  PlayingSceneName: SampleScene
+  MenuSceneName: Menu

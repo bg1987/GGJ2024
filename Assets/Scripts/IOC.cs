@@ -8,6 +8,7 @@ public class IOC : ScriptableObject
     private static IOC instance;
 
     public Difficulty gameDifficulty;
+    public GameLifecycle gameLifeCycle;
 
     private Dictionary<Type, object> objectMap = new Dictionary<Type, object>();
 
@@ -43,6 +44,15 @@ public class IOC : ScriptableObject
         else
         {
             Debug.LogError("NO GAME DIFFICULTY");
+        }
+
+        if (gameLifeCycle != null)
+        {
+            IOC.Register(gameLifeCycle);
+        }
+        else
+        {
+            Debug.LogError("NO GAME LIFECYCLE");
         }
     }
 
