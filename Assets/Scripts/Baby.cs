@@ -46,7 +46,7 @@ public class Baby : MonoBehaviour
         if (wantsTimer < 0)
         {
             PickNewWant();
-            Debug.Log("Baby wants " + ((null == currentWant) ? "null" : currentWant.gameObject.name);
+            Debug.Log("Baby wants " + ((null == currentWant) ? "null" : currentWant.gameObject.name));
             wantsTimer = GameDifficulty.WantsChangeFrequency;
         }
         else

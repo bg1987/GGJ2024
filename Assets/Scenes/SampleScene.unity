@@ -885,14 +885,14 @@ Transform:
   m_GameObject: {fileID: 1149800172}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1669530840}
   - {fileID: 1603816181}
   - {fileID: 783750635}
   - {fileID: 1140947053}
+  - {fileID: 1669530840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1192990679
@@ -1378,6 +1378,7 @@ GameObject:
   - component: {fileID: 1708784977}
   - component: {fileID: 1708784976}
   - component: {fileID: 1708784975}
+  - component: {fileID: 1708784978}
   m_Layer: 0
   m_Name: Baby
   m_TagString: Untagged
@@ -1400,34 +1401,8 @@ MonoBehaviour:
   mySprite: {fileID: 1708784976}
   happyColor: {r: 1, g: 0.7122642, b: 0.7122642, a: 1}
   sadColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
-  hpDecay: 6.6
   HP: 100
-  wantChangeFrequency: 5
-  changeFrequency:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 8
-      inSlope: -0.008745594
-      outSlope: -0.008745594
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.1161997
-    - serializedVersion: 3
-      time: 60
-      value: 0.5
-      inSlope: -0.125
-      outSlope: -0.125
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  wrongWantFactor: 2
+  GameDifficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}
 --- !u!212 &1708784976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1495,6 +1470,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1708784978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708784974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adf63786d7724ae89b46c2b7c6fa9bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2287601575229431901, guid: 0d8dd18175afa4017893618ac7c90624, type: 3}
+  spawnRadius: 9.86
+  arcAngle: 360
+  Difficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}
 --- !u!1 &1865872701
 GameObject:
   m_ObjectHideFlags: 0
