@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace StrikeTheTarget
 {
-    public class Station : StationBase
+    public class StrikerStation : StationBase
     {
         [SerializeField] private Transform plane;
 
@@ -22,7 +22,7 @@ namespace StrikeTheTarget
 
         public void OnStrike(bool success)
         {
-            if (isVisited)
+            if (isVisited && success)
             {
                 baby.AddHp(this, HPPerHit);
             }
