@@ -17,6 +17,9 @@ public class Difficulty : ScriptableObject
     public float happyHpMin = 100;
     public float planeDamage = 5;
 
+    public float defaultHpPerStationHit = 5f;
+    public float strikerHpPerHit = 20f;
+
     public float PlaneSpeed
     {
         get { return planeSpeed.Evaluate(Time.time); }

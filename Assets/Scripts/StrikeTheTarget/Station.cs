@@ -6,7 +6,11 @@ namespace StrikeTheTarget
     {
         [SerializeField] private Transform plane;
 
-        // Update is called once per frame
+        void Start()
+        {
+            this.HPPerHit = gameDifficulty.strikerHpPerHit;
+        }
+
         void Update()
         {
             if (isVisited != plane.gameObject.activeSelf)
@@ -15,7 +19,7 @@ namespace StrikeTheTarget
             }
         }
 
-        public void OnStrike (bool success)
+        public void OnStrike(bool success)
         {
             if (isVisited)
             {

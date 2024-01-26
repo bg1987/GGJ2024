@@ -5,7 +5,7 @@ public class PlaneSpawner : MonoBehaviour
     public GameObject prefab;
     public float spawnRadius = 5f; // Radius of the spawn area
     public float arcAngle = 360f; // Angle of the arc in degrees
-    public Difficulty Difficulty;
+    private Difficulty GameDifficulty;
 
     private float timer = 0f;
     private float timeToSpawn;
@@ -13,6 +13,7 @@ public class PlaneSpawner : MonoBehaviour
     private void Start()
     {
         timeToSpawn = 0;
+        GameDifficulty = IOC.Get<Difficulty>();
     }
 
     private void Update()
@@ -53,6 +54,6 @@ public class PlaneSpawner : MonoBehaviour
 
     private void SetSpawnFrequency()
     {
-        timeToSpawn = Difficulty.PlaneSpawnFrequency;
+        timeToSpawn = GameDifficulty.PlaneSpawnFrequency;
     }
 }

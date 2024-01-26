@@ -9,11 +9,10 @@ public class Baby : MonoBehaviour
 
     public float HP = 100;
 
-    public Difficulty GameDifficulty;
-
     private StationBase currentWant;
     private int currentWantIndex;
 
+    private Difficulty GameDifficulty;
 
     private float MaxHp;
     private List<StationBase> possibleWants = new List<StationBase>();
@@ -28,6 +27,8 @@ public class Baby : MonoBehaviour
     {
         HP = GameDifficulty.startingHP;
         MaxHp = GameDifficulty.maxHp;
+
+        GameDifficulty = IOC.Get<Difficulty>();
 
         initWant();
     }

@@ -3,18 +3,23 @@ using UnityEngine;
 public abstract class StationBase : MonoBehaviour
 {
     public Color stationColor;
-    public float HPPerHit = 10f; 
-    
-    
-    private Parent parent;
     protected Baby baby;
+    protected Difficulty gameDifficulty;
+    protected float HPPerHit;
     protected bool isVisited;
-    
-    
+
+
+    private Parent parent;
+
+
     private void Start()
     {
         parent = IOC.Get<Parent>();
         baby = IOC.Get<Baby>();
+        gameDifficulty = IOC.Get<Difficulty>();
+
+        HPPerHit = gameDifficulty.defaultHpPerStationHit;
+
         baby.AddWant(this);
     }
 

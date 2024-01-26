@@ -7,6 +7,8 @@ public class IOC : ScriptableObject
 {
     private static IOC instance;
 
+    public Difficulty gameDifficulty;
+
     private Dictionary<Type, object> objectMap = new Dictionary<Type, object>();
 
     public static IOC Instance
@@ -34,6 +36,10 @@ public class IOC : ScriptableObject
     private void InitObjectMap()
     {
         objectMap.Clear();
+        if (gameDifficulty != null)
+        {
+            IOC.Register(gameDifficulty);
+        }
     }
 
     public static void Register<T>(T obj) where T : class
