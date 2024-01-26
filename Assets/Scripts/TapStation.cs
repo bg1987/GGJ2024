@@ -4,9 +4,14 @@ public class TapStation : StationBase
 {
     private void Update()
     {
-        if (isVisited && Input.GetKeyDown(KeyCode.Space))
+        if (isVisited)
         {
-            baby.AddHp(this, HPPerHit);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                baby.AddHp(this, HPPerHit);
+            }
+
+            shouldTap.onShouldTap(!Input.GetKeyDown(KeyCode.Space));
         }
     }
 }

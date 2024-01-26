@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb14912433544fb5a2691fe9a83478c, type: 3}
   m_Name: Difficulty
   m_EditorClassIdentifier: 
-  gameLength: 240
+  gameLength: 90
   wantsChangeFrequencyValues: {x: 8, y: 1}
   wantsChangeFrequency:
     serializedVersion: 2
@@ -20,29 +20,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.98669773
-      outSlope: 0.98669773
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.99543214
-      value: 0.9821906
-      inSlope: 2.4427722
-      outSlope: 2.4427722
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 3.8988464
-      outSlope: 3.8988464
+      inSlope: 1
+      outSlope: 1
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -54,18 +45,18 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -88,20 +79,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 1.0911194
+      outSlope: 1.0911194
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.026092231
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  wrongWantFactor: 2
-  startingHP: 75
+  wrongWantFactor: 0
+  startingHP: 150
   maxHp: 150
-  hpDecay: 10
-  happyHpMin: 90
-  planeDamage: 15
+  hpDecay: 15
+  happyHpMin: 120
+  planeDamage: 40
   defaultHpPerStationHit: 5
   strikerHpPerHit: 50

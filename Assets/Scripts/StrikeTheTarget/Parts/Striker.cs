@@ -17,6 +17,7 @@ namespace StrikeTheTarget.Parts
         [SerializeField] private UnityEvent failedStrike;
 
         private bool onTarget = false;
+        private PressKeyIndicator shouldTap;
 
         private void Awake()
         {
@@ -28,6 +29,11 @@ namespace StrikeTheTarget.Parts
             sequence.Play();
         }
 
+        private void Start()
+        {
+            shouldTap = IOC.Get<PressKeyIndicator>();
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -36,6 +42,8 @@ namespace StrikeTheTarget.Parts
 
                 (onTarget ? successfulStrike : failedStrike)?.Invoke();
             }
+
+            shouldTap.onShouldTap(onTarget);
         }
 
         private void OnTriggerEnter2D(Collider2D other)

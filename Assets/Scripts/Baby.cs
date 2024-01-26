@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -56,7 +57,7 @@ public class Baby : MonoBehaviour
     {
         currentWantIndex = Random.Range(0, possibleWants.Count);
         currentWant = possibleWants[currentWantIndex];
-        wantBubble.color = currentWant.stationColor;
+        ChangeThoughtBubble();
         possibleWants.RemoveAt(currentWantIndex);
 
         wantsTimer = GameDifficulty.WantsChangeFrequency;
@@ -83,7 +84,7 @@ public class Baby : MonoBehaviour
         var oldWant = currentWant;
         currentWantIndex = Random.Range(0, possibleWants.Count);
         currentWant = possibleWants[currentWantIndex];
-        wantBubble.color = currentWant.stationColor;
+        ChangeThoughtBubble();
         if (currentWant == null)
         {
             Debug.Break();
@@ -121,5 +122,22 @@ public class Baby : MonoBehaviour
             Debug.Log("plane made ouch");
             HP -= GameDifficulty.planeDamage;
         }
+    }
+
+    private void ChangeThoughtBubble()
+    {
+        wantBubble.color = currentWant.stationColor;
+
+
+        var growSize = 1.3f;
+        var growDuration = 0.15f;
+        Tween growTween = wantBubble.transform.DOScale(Vector3.one * growSize, growDuration);
+        growTween.SetEase(Ease.OutSine);
+
+        Sequence sequence = DOTween.Sequence()
+            .Append(growTween).SetLoops(2, LoopType.Yoyo).SetEase(Ease.InOutQuad);
+
+        // Start the animation
+        sequence.Play();
     }
 }

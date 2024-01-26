@@ -10,13 +10,14 @@ public abstract class StationBase : MonoBehaviour
 
 
     private Parent parent;
-
+    protected PressKeyIndicator shouldTap;
 
     protected virtual void Start()
     {
         parent = IOC.Get<Parent>();
         baby = IOC.Get<Baby>();
         gameDifficulty = IOC.Get<Difficulty>();
+        shouldTap = IOC.Get<PressKeyIndicator>();
 
         HPPerHit = gameDifficulty.defaultHpPerStationHit;
 
@@ -38,6 +39,7 @@ public abstract class StationBase : MonoBehaviour
         {
             parent.ResetColor();
             isVisited = false;
+            shouldTap.onShouldTap(false);
         }
     }
 }

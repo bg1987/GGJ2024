@@ -18,6 +18,11 @@ namespace HomeRun
             {
                 plane.gameObject.SetActive(isVisited);
             }
+
+            if (isVisited)
+            {
+                shouldTap.onShouldTap(true);
+            }
         }
 
         public void OnRelease(bool legal)
