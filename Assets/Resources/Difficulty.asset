@@ -89,4 +89,6 @@ MonoBehaviour:
   maxHp: 150
   hpDecay: 6.6
   happyHpMin: 100
-  planeDamage: 5
+  planeDamage: 30
+  defaultHpPerStationHit: 5
+  strikerHpPerHit: 20

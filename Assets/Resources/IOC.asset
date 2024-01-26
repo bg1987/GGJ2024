@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac0c514eabda4c719cd4322a977b749, type: 3}
   m_Name: IOC
   m_EditorClassIdentifier: 
+  gameDifficulty: {fileID: 11400000, guid: 09711b73a7dfd4f289f70847377cecb5, type: 2}
