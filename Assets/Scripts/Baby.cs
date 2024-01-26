@@ -25,10 +25,11 @@ public class Baby : MonoBehaviour
 
     void Start()
     {
+        GameDifficulty = IOC.Get<Difficulty>();
+
         HP = GameDifficulty.startingHP;
         MaxHp = GameDifficulty.maxHp;
 
-        GameDifficulty = IOC.Get<Difficulty>();
 
         initWant();
     }

@@ -12,7 +12,7 @@ public abstract class StationBase : MonoBehaviour
     private Parent parent;
 
 
-    private void Start()
+    protected virtual void Start()
     {
         parent = IOC.Get<Parent>();
         baby = IOC.Get<Baby>();

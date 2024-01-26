@@ -6,8 +6,9 @@ namespace StrikeTheTarget
     {
         [SerializeField] private Transform plane;
 
-        void Start()
+        protected override void Start()
         {
+            base.Start();
             this.HPPerHit = gameDifficulty.strikerHpPerHit;
         }
 

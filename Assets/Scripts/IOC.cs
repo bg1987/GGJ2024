@@ -40,6 +40,10 @@ public class IOC : ScriptableObject
         {
             IOC.Register(gameDifficulty);
         }
+        else
+        {
+            Debug.LogError("NO GAME DIFFICULTY");
+        }
     }
 
     public static void Register<T>(T obj) where T : class
