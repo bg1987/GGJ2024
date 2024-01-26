@@ -679,6 +679,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2099009758}
+        m_TargetAssemblyTypeName: StrikeTheTarget.Parts.Target, Assembly-CSharp
+        m_MethodName: OnStrike
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   failedStrike:
     m_PersistentCalls:
       m_Calls:
@@ -1710,6 +1722,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lBumper: {fileID: 118121554}
   rBumper: {fileID: 448129139}
+  shakeStrength: 0.1
+  shakeVibrato: 1000
+  shakeRandomness: 90
+  shakeRandomnessMode: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

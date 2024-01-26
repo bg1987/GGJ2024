@@ -9,6 +9,10 @@ namespace StrikeTheTarget.Parts
     {
         [SerializeField] private Transform lBumper;
         [SerializeField] private Transform rBumper;
+        [SerializeField] private float shakeStrength = 1f;
+        [SerializeField] private int shakeVibrato = 10;
+        [SerializeField] private float shakeRandomness = 90f;
+        [SerializeField] private ShakeRandomnessMode shakeRandomnessMode = ShakeRandomnessMode.Full;
 
         private void OnEnable()
         {
@@ -19,5 +23,7 @@ namespace StrikeTheTarget.Parts
 
             transform.SetPositionAndRotation(lBumperPosition + (normalized * magnitude), transform.rotation);
         }
+
+        public void OnStrike() => transform.DOShakePosition(0.1f, shakeStrength, shakeVibrato, shakeRandomness, false, false, shakeRandomnessMode);
     }
 }

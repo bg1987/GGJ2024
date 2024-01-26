@@ -49,6 +49,7 @@ namespace StrikeTheTarget.Parts
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("Strike " + (onTarget? "SUCCESS!" : "FAILED!"));
+                
                 (onTarget ? successfulStrike : failedStrike)?.Invoke();
             }
         }
