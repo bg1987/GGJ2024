@@ -28,6 +28,8 @@ public class Baby : MonoBehaviour
     {
         HP = GameDifficulty.startingHP;
         MaxHp = GameDifficulty.maxHp;
+
+        initWant();
     }
 
     void Update()
@@ -39,6 +41,16 @@ public class Baby : MonoBehaviour
         {
             QuitGame();
         }
+    }
+
+    private void initWant()
+    {
+        currentWantIndex = Random.Range(0, possibleWants.Count);
+        currentWant = possibleWants[currentWantIndex];
+        possibleWants.RemoveAt(currentWantIndex);
+
+        wantsTimer = GameDifficulty.WantsChangeFrequency;
+        Debug.Log("Baby wants " + ((null == currentWant) ? "null" : currentWant.gameObject.name));
     }
 
     private void ManageWants()
@@ -60,12 +72,18 @@ public class Baby : MonoBehaviour
         var oldWant = currentWant;
         currentWantIndex = Random.Range(0, possibleWants.Count);
         currentWant = possibleWants[currentWantIndex];
+        if (currentWant == null)
+        {
+            Debug.Break();
+        }
+
         possibleWants.RemoveAt(currentWantIndex);
         possibleWants.Add(oldWant);
     }
 
     public void AddWant(StationBase s)
     {
+        Debug.Log("possible want: " + s.gameObject.name);
         possibleWants.Add(s);
     }
 
