@@ -1,15 +1,14 @@
-using System;
 using UnityEngine;
 
-public class Station : MonoBehaviour
+public abstract class StationBase : MonoBehaviour
 {
     public Color stationColor;
     public float HPPerHit = 10f; 
     
     
     private Parent parent;
-    private Baby baby;
-    private bool isVisited;
+    protected Baby baby;
+    protected bool isVisited;
     
     
     private void Start()
@@ -17,14 +16,6 @@ public class Station : MonoBehaviour
         parent = IOC.Get<Parent>();
         baby = IOC.Get<Baby>();
         baby.AddWant(this);
-    }
-
-    private void Update()
-    {
-        if (isVisited && Input.GetKeyDown(KeyCode.Space))
-        {
-            baby.AddHp(this, HPPerHit);
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

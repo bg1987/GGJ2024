@@ -11,12 +11,12 @@ public class Baby : MonoBehaviour
 
     public Difficulty GameDifficulty;
 
-    private Station currentWant;
+    private StationBase currentWant;
     private int currentWantIndex;
 
 
     private float MaxHp;
-    private List<Station> possibleWants = new List<Station>();
+    private List<StationBase> possibleWants = new List<StationBase>();
     private float wantsTimer;
 
     private void Awake()
@@ -46,7 +46,7 @@ public class Baby : MonoBehaviour
         if (wantsTimer < 0)
         {
             PickNewWant();
-            Debug.Log("Baby wants " + currentWant.gameObject.name);
+            Debug.Log("Baby wants " + ((null == currentWant) ? "null" : currentWant.gameObject.name);
             wantsTimer = GameDifficulty.WantsChangeFrequency;
         }
         else
@@ -64,12 +64,12 @@ public class Baby : MonoBehaviour
         possibleWants.Add(oldWant);
     }
 
-    public void AddWant(Station s)
+    public void AddWant(StationBase s)
     {
         possibleWants.Add(s);
     }
 
-    public void AddHp(Station s, float toAdd)
+    public void AddHp(StationBase s, float toAdd)
     {
         if (currentWant != s)
         {
