@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb14912433544fb5a2691fe9a83478c, type: 3}
   m_Name: Difficulty
   m_EditorClassIdentifier: 
-  curve:
+  wantsChangeFrequency:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -84,3 +84,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  wrongWantFactor: 2
+  startingHP: 100
+  maxHp: 150
+  hpDecay: 6.6
+  happyHpMin: 100
+  planeDamage: 5
