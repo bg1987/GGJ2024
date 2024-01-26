@@ -38,6 +38,7 @@ public class GameLifecycle : ScriptableObject
     {
         _state = GameState.Menu;
         SceneManager.LoadScene(MenuSceneName);
+        Resources.UnloadAsset(IOC.Instance);
     }
 
     public void QuitGame()
