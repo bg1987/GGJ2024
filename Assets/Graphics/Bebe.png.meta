@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 30fb6fa3865b3421285ad8b8519cd3da
+guid: 923d5cd26453d41c488d71370ee0c73b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -136,265 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DanceSpriteSheet Rough_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 750
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad0e7982b52424d6db60f22575bfdaa2
-      internalID: -1615317313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_1
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 750
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6be9d5e25b8c41d197fc555fbe5307f
-      internalID: -1198445565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_2
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 750
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 786e2561d70f441bfb06dd905f47960f
-      internalID: -1420197272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_3
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 750
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2325995320084985acc447f4c03a0df
-      internalID: 1970487802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 500
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e2b5f2d675554629af1ad7200c843de
-      internalID: -1009563456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_5
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 500
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2f7d19a687114d6d84cdc1c80023199
-      internalID: -1975944514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_6
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 500
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cb6a06a247264949b7c5399cc44e110
-      internalID: -1396684162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_7
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 500
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5a9b6a425c4e449eaf6e40fce9aefdf
-      internalID: -1919663839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b596d773b842448d8ce27bc7ed61828
-      internalID: 1666174198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_9
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4c6e82838913423083c3dff23073508
-      internalID: 389694299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_10
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad24fc572ad3943d2a9c59feb62c54d8
-      internalID: -116092607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_11
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 250
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05d934c8dad3e45b0b05a4e8e0770e84
-      internalID: 906659867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_12
+      name: Bebe_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 250
-        height: 250
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,41 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 953161d675e214b17a630b7256bccfab
-      internalID: -921578036
+      spriteID: 6f1e8be0353b94fab92500fcdfe65b7d
+      internalID: 887511511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DanceSpriteSheet Rough_13
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 0
-        width: 250
-        height: 250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f11ba693f4464c76b89da800016e0c4
-      internalID: -423492010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DanceSpriteSheet Rough_14
+      name: Bebe_1
       rect:
         serializedVersion: 2
         x: 500
         y: 0
-        width: 250
-        height: 250
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b5fe1796a9a6481e9cfe514a7e60426
-      internalID: 474646097
+      spriteID: 802639c2caa374b4dad91855fe24e39c
+      internalID: 1927461610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DanceSpriteSheet Rough_15
+      name: Bebe_2
       rect:
         serializedVersion: 2
-        x: 750
+        x: 1000
         y: 0
-        width: 250
-        height: 250
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,8 +192,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3609031ab9aa4481db6f4e6878746931
-      internalID: -472932454
+      spriteID: ba6e8541774ac4e058fe095df553787a
+      internalID: -369398522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bebe_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd395499201b54d009aa1579346f61ce
+      internalID: -658255894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bebe_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14855a9aef8154c44a0385ee81c2ca82
+      internalID: -1912913777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bebe_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d326464e8adc840b0a16d19397e62afc
+      internalID: 892290880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bebe_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e415221de21794eba81bcfbaaac1b5cc
+      internalID: -151782560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bebe_7
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc788fc500b9d4bfbaa0280424e9ce3a
+      internalID: 317506506
       vertices: []
       indices: 
       edges: []
@@ -482,22 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DanceSpriteSheet Rough_0: -1615317313
-      DanceSpriteSheet Rough_1: -1198445565
-      DanceSpriteSheet Rough_10: -116092607
-      DanceSpriteSheet Rough_11: 906659867
-      DanceSpriteSheet Rough_12: -921578036
-      DanceSpriteSheet Rough_13: -423492010
-      DanceSpriteSheet Rough_14: 474646097
-      DanceSpriteSheet Rough_15: -472932454
-      DanceSpriteSheet Rough_2: -1420197272
-      DanceSpriteSheet Rough_3: 1970487802
-      DanceSpriteSheet Rough_4: -1009563456
-      DanceSpriteSheet Rough_5: -1975944514
-      DanceSpriteSheet Rough_6: -1396684162
-      DanceSpriteSheet Rough_7: -1919663839
-      DanceSpriteSheet Rough_8: 1666174198
-      DanceSpriteSheet Rough_9: 389694299
+      Bebe_0: 887511511
+      Bebe_1: 1927461610
+      Bebe_2: -369398522
+      Bebe_3: -658255894
+      Bebe_4: -1912913777
+      Bebe_5: 892290880
+      Bebe_6: -151782560
+      Bebe_7: 317506506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
