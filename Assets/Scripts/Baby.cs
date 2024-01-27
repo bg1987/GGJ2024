@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -46,7 +47,7 @@ public class Baby : MonoBehaviour
         // mySprite.color = Color.Lerp(sadColor, happyColor, (HP / MaxHp));
         ManageWants();
 
-        var statestimate = (int) ((HP / MaxHp) * stateSprites.Length);
+        var statestimate = Math.Max(0, Mathf.FloorToInt(((HP / MaxHp) * stateSprites.Length)));
         mySprite.sprite = stateSprites[statestimate];
         
         GameDifficulty.updateGameTime();
