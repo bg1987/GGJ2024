@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public abstract class StationBase : MonoBehaviour
@@ -13,16 +14,23 @@ public abstract class StationBase : MonoBehaviour
     protected Parent parent;
     protected PressKeyIndicator shouldTap;
 
+    protected void Awake()
+    {
+    }
+
+    protected void OnEnable()
+    {
+        baby = IOC.Get<Baby>();
+        baby.AddWant(this);
+    }
+
     protected virtual void Start()
     {
         parent = IOC.Get<Parent>();
-        baby = IOC.Get<Baby>();
         gameDifficulty = IOC.Get<Difficulty>();
         shouldTap = IOC.Get<PressKeyIndicator>();
 
         HPPerHit = gameDifficulty.defaultHpPerStationHit;
-
-        baby.AddWant(this);
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
