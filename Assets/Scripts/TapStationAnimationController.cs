@@ -20,8 +20,6 @@ public class TapStationAnimationController : MonoBehaviour
         }
 
         timer += Time.deltaTime;
-        Debug.Log(timer);
-        Debug.Log(timer >= threshold);
         if (timer >= threshold)
         {
             timer = 0;
