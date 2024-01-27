@@ -1687,13 +1687,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3205775161824006054, guid: df48e1efd2e1a468c9a783b70609aa25, type: 3}
+      propertyPath: baby
+      value: 
+      objectReference: {fileID: 8382856913128703878}
+    - target: {fileID: 3205775161824006054, guid: df48e1efd2e1a468c9a783b70609aa25, type: 3}
       propertyPath: plane
       value: 
       objectReference: {fileID: 4428891158226308304}
     - target: {fileID: 4070836389320439677, guid: df48e1efd2e1a468c9a783b70609aa25, type: 3}
+      propertyPath: baby
+      value: 
+      objectReference: {fileID: 8382856913128703878}
+    - target: {fileID: 4070836389320439677, guid: df48e1efd2e1a468c9a783b70609aa25, type: 3}
       propertyPath: plane
       value: 
       objectReference: {fileID: 1192990680}
+    - target: {fileID: 4156310111436593027, guid: df48e1efd2e1a468c9a783b70609aa25, type: 3}
+      propertyPath: baby
+      value: 
+      objectReference: {fileID: 8382856913128703878}
     - target: {fileID: 6376343131347419031, guid: df48e1efd2e1a468c9a783b70609aa25, type: 3}
       propertyPath: m_Name
       value: Parent Plane
@@ -2134,6 +2146,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2229bb4447eea4e38ac15c853789eb12, type: 3}
+--- !u!114 &8382856913128703878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7340282161178893383, guid: 2229bb4447eea4e38ac15c853789eb12, type: 3}
+  m_PrefabInstance: {fileID: 8382856913128703877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c0041045516046ed9608d7b62dda1de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

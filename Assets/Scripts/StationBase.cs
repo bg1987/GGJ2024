@@ -5,7 +5,7 @@ public abstract class StationBase : MonoBehaviour
 {
     public Color stationColor;
     public Sprite stationIcon;
-    protected Baby baby;
+    [SerializeField] protected Baby baby;
     protected Difficulty gameDifficulty;
     protected float HPPerHit;
     protected bool isVisited;
@@ -20,7 +20,6 @@ public abstract class StationBase : MonoBehaviour
 
     protected void OnEnable()
     {
-        baby = IOC.Get<Baby>();
         baby.AddWant(this);
     }
 
