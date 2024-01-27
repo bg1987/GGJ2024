@@ -38,7 +38,7 @@ public class GameLifecycle : ScriptableObject
     public void LoseGame()
     {
         _state = GameState.Menu;
-        SceneManager.LoadScene(MenuSceneName);
+        SceneManager.LoadScene(EndSceneName);
         Resources.UnloadAsset(IOC.Instance);
     }
 
