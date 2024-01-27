@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 783750636}
   - component: {fileID: 783750637}
   m_Layer: 0
-  m_Name: Pikaboo
+  m_Name: Rattle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1133,6 +1133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stationColor: {r: 0.92549026, g: 0.2627451, b: 0.6862745, a: 1}
   plane: {fileID: 1192990680}
+  anim: {fileID: 1541930301}
 --- !u!1 &820610820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1650,7 @@ GameObject:
   - component: {fileID: 1140947054}
   - component: {fileID: 1140947055}
   m_Layer: 0
-  m_Name: Boo
+  m_Name: Pikaboo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2080,8 +2081,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1541930299}
   - component: {fileID: 1541930300}
+  - component: {fileID: 1541930301}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: RattleImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2143,8 +2145,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.98039216, g: 0.22745098, b: 0.70980394, a: 1}
+  m_Sprite: {fileID: 1441795585, guid: 827394754534142d48d3e90ab9222386, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2154,6 +2156,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1541930301
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541930298}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 65004f96265e44e9f9d011b959a8fd5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1578835862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,7 +2291,7 @@ GameObject:
   - component: {fileID: 1603816183}
   - component: {fileID: 1603816184}
   m_Layer: 0
-  m_Name: Rattle
+  m_Name: Dance Party
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

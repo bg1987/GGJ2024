@@ -89,8 +89,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   wrongWantFactor: 0
-  startingHP: 150
-  maxHp: 150
+  startingHP: 1500
+  maxHp: 1500
   hpDecay: 15
   happyHpMin: 120
   planeDamage: 40
