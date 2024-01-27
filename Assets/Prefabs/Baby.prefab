@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6508110029343663767}
   - component: {fileID: 307697232429870999}
   - component: {fileID: 8954981661288330849}
+  - component: {fileID: 1442308785553604937}
   m_Layer: 0
   m_Name: Babe
   m_TagString: Untagged
@@ -101,6 +102,23 @@ MonoBehaviour:
   radius: 0.5
   speed: 0.1
   oscillationRange: 0.5
+--- !u!114 &1442308785553604937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707190446607145087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fa995f1eb6bf74abee70273e991bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  babyToShake: {fileID: 7340282161178893383}
+  durationSeconds: 0.1
+  strength: 0.005
+  vibrato: 30
+  randomness: 90
 --- !u!1 &2091215722223366294
 GameObject:
   m_ObjectHideFlags: 0
