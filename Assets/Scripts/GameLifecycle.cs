@@ -12,6 +12,7 @@ public class GameLifecycle : ScriptableObject
 
     public string PlayingSceneName;
     public string MenuSceneName;
+    public string EndSceneName;
 
     private GameState _state;
 

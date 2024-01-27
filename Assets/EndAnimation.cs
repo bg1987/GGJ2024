@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndAnimation : MonoBehaviour
 {
@@ -25,14 +26,13 @@ public class EndAnimation : MonoBehaviour
         });
         sequence.AppendInterval(2f);
         sequence.Append(transform.DOScale(5,10));
+        sequence.AppendInterval(1f);
+        sequence.AppendCallback(() =>
+        {
+            SceneManager.LoadScene("Menu");
+        });
         sequence.Play();
 
         curtain.DOColor(curtainColor, sequence.Duration());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
