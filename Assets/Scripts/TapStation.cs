@@ -6,9 +6,9 @@ public class TapStation : StationBase
 
     private void Update()
     {
+        anim.visible = isVisited;
         if (isVisited)
         {
-            anim.visible = isVisited;
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 anim.Step();
@@ -17,5 +17,11 @@ public class TapStation : StationBase
 
             shouldTap.onShouldTap(!Input.GetKeyDown(KeyCode.Space));
         }
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+        parent.ChangeColor(Color.clear);
     }
 }

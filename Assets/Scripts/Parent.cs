@@ -7,6 +7,8 @@ public class Parent : MonoBehaviour
     public float rightLimit = 5f;
     public SpriteRenderer mySprite;
 
+    public Animator anim;
+
     private Color originalColor;
 
     private void Awake()
@@ -24,6 +26,7 @@ public class Parent : MonoBehaviour
         // Get horizontal input
         float horizontalInput = Input.GetAxis("Horizontal");
 
+        anim.SetFloat("Horizontal", horizontalInput);
         // Calculate new position
         Vector3 newPosition = transform.position + new Vector3(horizontalInput * moveSpeed * Time.deltaTime, 0, 0);
 

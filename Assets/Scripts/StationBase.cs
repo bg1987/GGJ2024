@@ -9,7 +9,7 @@ public abstract class StationBase : MonoBehaviour
     protected bool isVisited;
 
 
-    private Parent parent;
+    protected Parent parent;
     protected PressKeyIndicator shouldTap;
 
     protected virtual void Start()
@@ -24,7 +24,7 @@ public abstract class StationBase : MonoBehaviour
         baby.AddWant(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -33,7 +33,7 @@ public abstract class StationBase : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    protected virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
