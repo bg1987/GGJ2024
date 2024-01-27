@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class StationBase : MonoBehaviour
 {
     public Color stationColor;
+    public SpriteRenderer stationIcon;
     protected Baby baby;
     protected Difficulty gameDifficulty;
     protected float HPPerHit;
