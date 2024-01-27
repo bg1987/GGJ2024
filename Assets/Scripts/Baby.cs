@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Baby : MonoBehaviour
@@ -25,6 +28,9 @@ public class Baby : MonoBehaviour
     private List<StationBase> possibleWants = new List<StationBase>();
     private float wantsTimer;
 
+    [SerializeField] private GameObject chewing;
+    [FormerlySerializedAs("chewtime")] [SerializeField] private float chewTime = 0.75f;
+
     private void Awake()
     {
         IOC.Register(this);
@@ -47,7 +53,7 @@ public class Baby : MonoBehaviour
         // mySprite.color = Color.Lerp(sadColor, happyColor, (HP / MaxHp));
         ManageWants();
 
-        var statestimate = Math.Max(0, Mathf.FloorToInt(((HP / MaxHp) * stateSprites.Length)));
+        var statestimate = (int)Math.Max(0, Mathf.Clamp(((HP / MaxHp) * stateSprites.Length),0f,stateSprites.Length-1));
         mySprite.sprite = stateSprites[statestimate];
 
         GameDifficulty.updateGameTime();
@@ -119,7 +125,7 @@ public class Baby : MonoBehaviour
         }
         // Debug.Log("Current HP "+ HP);
     }
-
+    
     public void PlaneHit()
     {
         if (HP < GameDifficulty.happyHpMin)
@@ -127,6 +133,17 @@ public class Baby : MonoBehaviour
             Debug.Log("plane made ouch");
             HP -= GameDifficulty.planeDamage;
         }
+        else
+        {
+            Chew(this.GetCancellationTokenOnDestroy()).Forget();
+        }
+    }
+
+    private async UniTaskVoid Chew(CancellationToken ct = default)
+    {
+        chewing.SetActive(true);
+        await UniTask.Delay((int)(chewTime*1000), cancellationToken: ct);
+        chewing.SetActive(false);
     }
 
     private void ChangeThoughtBubble()
