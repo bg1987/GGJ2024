@@ -49,7 +49,7 @@ public class Baby : MonoBehaviour
 
         var statestimate = Math.Max(0, Mathf.FloorToInt(((HP / MaxHp) * stateSprites.Length)));
         mySprite.sprite = stateSprites[statestimate];
-        
+
         GameDifficulty.updateGameTime();
         if (HP < 0)
         {
@@ -131,7 +131,7 @@ public class Baby : MonoBehaviour
 
     private void ChangeThoughtBubble()
     {
-        wantBubble.color = currentWant.stationColor;
+        wantBubble.sprite = currentWant.stationIcon;
 
 
         var growSize = 1.3f;
