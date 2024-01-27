@@ -337,6 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247038961}
   - component: {fileID: 247038962}
+  - component: {fileID: 247038963}
   m_Layer: 0
   m_Name: WantsBubble
   m_TagString: Untagged
@@ -414,6 +415,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &247038963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247038960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcca27c60e41e643bf78ffb29804f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 1253987556}
+  movementScale: 0.1
+  reverse: 1
+  relative: 1
 --- !u!1 &282574615
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +563,7 @@ MonoBehaviour:
   parent: {fileID: 1669530840}
   movementScale: 0.0375
   reverse: 0
+  relative: 0
 --- !u!212 &438624554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -822,6 +840,7 @@ MonoBehaviour:
   parent: {fileID: 1669530840}
   movementScale: 0.01
   reverse: 1
+  relative: 0
 --- !u!1 &614272723
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614272724}
   - component: {fileID: 614272725}
+  - component: {fileID: 614272726}
   m_Layer: 0
   m_Name: Hexagon Pointed-Top
   m_TagString: Untagged
@@ -906,6 +926,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &614272726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614272723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcca27c60e41e643bf78ffb29804f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 1253987556}
+  movementScale: 0.05
+  reverse: 1
+  relative: 1
 --- !u!1 &692887178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,6 +1181,7 @@ MonoBehaviour:
   parent: {fileID: 1669530840}
   movementScale: 0.075
   reverse: 0
+  relative: 0
 --- !u!212 &820610823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1207,6 +1244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 922728483}
   - component: {fileID: 922728484}
+  - component: {fileID: 922728485}
   m_Layer: 0
   m_Name: Hexagon Pointed-Top (1)
   m_TagString: Untagged
@@ -1281,6 +1319,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &922728485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922728482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcca27c60e41e643bf78ffb29804f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 1253987556}
+  movementScale: 0.025
+  reverse: 1
+  relative: 1
 --- !u!1 &996016427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +1944,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 8135025801b594b51a439deec0dd4e13, type: 3}
+  m_Sprite: {fileID: 1927461610, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1911,8 +1965,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5483797, y: 0.5483797, z: 0.5483797}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.21, y: 0.21, z: 0.21}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1708784977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2133,6 +2187,7 @@ MonoBehaviour:
   parent: {fileID: 1669530840}
   movementScale: 0.01
   reverse: 0
+  relative: 0
 --- !u!212 &1578835864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2482,6 +2537,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySprite: {fileID: 1253987555}
+  stateSprites:
+  - {fileID: 892290880, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
+  - {fileID: -1912913777, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
+  - {fileID: -658255894, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
+  - {fileID: -369398522, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
+  - {fileID: 1927461610, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
+  - {fileID: 887511511, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
   happyColor: {r: 1, g: 1, b: 1, a: 1}
   sadColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   HP: 100
@@ -2528,7 +2590,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8135025801b594b51a439deec0dd4e13, type: 3}
+  m_Sprite: {fileID: 887511511, guid: 923d5cd26453d41c488d71370ee0c73b, type: 3}
   m_Color: {r: 1, g: 0.7137255, b: 0.7137255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2893,6 +2955,7 @@ MonoBehaviour:
   parent: {fileID: 1669530840}
   movementScale: 0.15
   reverse: 0
+  relative: 0
 --- !u!212 &2079694702
 SpriteRenderer:
   m_ObjectHideFlags: 0

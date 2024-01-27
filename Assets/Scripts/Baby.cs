@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 public class Baby : MonoBehaviour
 {
     public SpriteRenderer mySprite;
+    public Sprite[] stateSprites;
     public Color happyColor;
     public Color sadColor;
 
@@ -42,9 +43,12 @@ public class Baby : MonoBehaviour
     void Update()
     {
         HP -= GameDifficulty.hpDecay * Time.deltaTime;
-        mySprite.color = Color.Lerp(sadColor, happyColor, HP / MaxHp);
+        // mySprite.color = Color.Lerp(sadColor, happyColor, (HP / MaxHp));
         ManageWants();
 
+        var statestimate = (int) ((HP / MaxHp) * stateSprites.Length);
+        mySprite.sprite = stateSprites[statestimate];
+        
         GameDifficulty.updateGameTime();
         if (HP < 0)
         {
