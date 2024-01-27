@@ -5,6 +5,7 @@ namespace HomeRun
     public class HomerStation : StationBase
     {
         [SerializeField] private Transform plane;
+        [SerializeField] private Animator anim;
 
         protected override void Start()
         {
@@ -14,6 +15,7 @@ namespace HomeRun
 
         void Update()
         {
+            anim.SetBool("Visited", isVisited);
             if (isVisited != plane.gameObject.activeSelf)
             {
                 plane.gameObject.SetActive(isVisited);
@@ -22,6 +24,7 @@ namespace HomeRun
             if (isVisited)
             {
                 shouldTap.onShouldTap(true);
+                anim.SetBool("Held", Input.GetKey(KeyCode.Space));
             }
         }
 

@@ -22,12 +22,6 @@ namespace StrikeTheTarget
             }
         }
 
-        protected virtual void OnTriggerEnter2D(Collider2D other)
-        {
-            base.OnTriggerEnter2D(other);
-            parent.ChangeColor(Color.clear);
-        }
-
         public void OnStrike(bool success)
         {
             if (isVisited && success)

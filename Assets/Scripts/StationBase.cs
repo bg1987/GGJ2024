@@ -28,8 +28,8 @@ public abstract class StationBase : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            parent.ChangeColor(stationColor);
             isVisited = true;
+            parent.ChangeColor(Color.clear);
         }
     }
 

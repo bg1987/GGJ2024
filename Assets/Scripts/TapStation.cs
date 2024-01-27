@@ -18,10 +18,4 @@ public class TapStation : StationBase
             shouldTap.onShouldTap(!Input.GetKeyDown(KeyCode.Space));
         }
     }
-
-    protected virtual void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-        parent.ChangeColor(Color.clear);
-    }
 }
