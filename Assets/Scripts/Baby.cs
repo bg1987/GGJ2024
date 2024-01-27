@@ -10,7 +10,7 @@ public class Baby : MonoBehaviour
     public Color sadColor;
 
     public float HP = 100;
-
+    public Transform planeTarget;
     public SpriteRenderer wantBubble;
 
     private StationBase currentWant;

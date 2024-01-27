@@ -15,7 +15,7 @@ public class Plane : MonoBehaviour
     private void Start()
     {
         baby = IOC.Get<Baby>();
-        SetTargetPosition(baby.transform);
+        SetTargetPosition(baby.planeTarget);
     }
 
     private void Update()

@@ -437,14 +437,14 @@ Transform:
   m_GameObject: {fileID: 247038960}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.624, y: 0.528, z: 0}
-  m_LocalScale: {x: 0.22134176, y: 0.22134176, z: 0.22134176}
+  m_LocalPosition: {x: 0.624, y: 0.52799994, z: 0}
+  m_LocalScale: {x: 0.22134174, y: 0.22134174, z: 0.22134174}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 614272724}
   - {fileID: 922728483}
   - {fileID: 1283277962}
-  m_Father: {fileID: 1708784977}
+  m_Father: {fileID: 522095771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &247038962
 SpriteRenderer:
@@ -629,6 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1669530840}
   movementScale: 0.0375
+  reverse: 0
 --- !u!212 &438624554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -857,6 +858,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &522095770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522095771}
+  - component: {fileID: 522095772}
+  m_Layer: 0
+  m_Name: WantsBubbleBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &522095771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522095770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.249, y: -0.083, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 247038961}
+  m_Father: {fileID: 1708784977}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522095772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522095770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcca27c60e41e643bf78ffb29804f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 1669530840}
+  movementScale: 0.01
+  reverse: 1
 --- !u!1 &614272723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1669530840}
   movementScale: 0.075
+  reverse: 0
 --- !u!212 &820610823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1875,6 +1925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1253987556}
   - component: {fileID: 1253987555}
+  - component: {fileID: 1253987557}
   m_Layer: 0
   m_Name: Babe
   m_TagString: Untagged
@@ -1949,6 +2000,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1708784977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1253987557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253987554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aae50a9aa9e9402882db6a3e3f63b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerPoint: {fileID: 1708784977}
+  radius: 0.5
+  speed: 0.1
+  oscillationRange: 0.5
 --- !u!1 &1283277961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1669530840}
   movementScale: 0.01
+  reverse: 0
 --- !u!212 &1578835864
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2500,6 +2568,7 @@ MonoBehaviour:
   happyColor: {r: 1, g: 1, b: 1, a: 1}
   sadColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 1}
   HP: 100
+  planeTarget: {fileID: 1253987556}
   wantBubble: {fileID: 1283277963}
 --- !u!212 &1708784976
 SpriteRenderer:
@@ -2566,8 +2635,8 @@ Transform:
   m_LocalScale: {x: 4.5179, y: 4.5179, z: 4.5179}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 247038961}
   - {fileID: 1253987556}
+  - {fileID: 522095771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1708784978
@@ -2884,6 +2953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 1669530840}
   movementScale: 0.15
+  reverse: 0
 --- !u!212 &2079694702
 SpriteRenderer:
   m_ObjectHideFlags: 0
